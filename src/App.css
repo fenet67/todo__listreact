@@ -25,11 +25,11 @@ body {
 }
 
 .title {
-  font-size: 2rem; /* Adjust the font size as needed */
+  font-size: 2rem; 
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px; /* Adjust the margin as needed */
-  color: #f3eeee; /* Optional: Set the text color */
+  margin-bottom: 20px; 
+  color: #f3eeee; 
 }
 
 
@@ -117,8 +117,8 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-image: url('./assets/bg.png'); /* Background image specific to the list area */
-  background-size: cover;    /* Ensures the image covers the list area */
+  background-image: url('./assets/bg.png'); 
+  background-size: cover;    
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 8px;
@@ -130,8 +130,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
-  background-color: rgba(255, 255, 255, 0.8); /* Slight background for better readability */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .TdItem:last-child {
