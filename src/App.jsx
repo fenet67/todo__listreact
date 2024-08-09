@@ -1,19 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react';
+import TdInput from './TdInput';  
+import TdList from './TdList';    
 import './App.css'
 
 function App() {
-  const [tasks, setTasks] = useState()
-  const addTask =(newTask) => {
-    if(newTask.trim() === '')return;
+  const [tasks, setTasks] = useState([]);
+  console.log('App component rendered!');
+  const addTask = (newTask) => {
+    if (newTask.trim() === '') return;
     const newTaskItem = {
-      id:Dte.now(),
-      text:newTasl,
-      completed:true,
-        };
-        setTasks([...tasks,newTaskItem]);
+      id: Date.now(),
+      text: newTask,
+      completed: false,
+    };
+    setTasks([...tasks, newTaskItem]);
   };
+
   const editTask = (id, newText) => {
     const updatedTasks = tasks.map(task =>
       task.id === id ? { ...task, text: newText } : task
@@ -32,20 +34,19 @@ function App() {
     );
     setTasks(updatedTasks);
   };
+
   return (
-    <>
-       <div className="TodoApp">
+    <div className="App">
       <h1>Todo List</h1>
-      <TodoInput addTask={addTask} />
-      <TodoList
+      <TdInput addTask={addTask} />
+      <TdList
         tasks={tasks}
         editTask={editTask}
         deleteTask={deleteTask}
         toggleTaskCompletion={toggleTaskCompletion}
-        />
-        </div>
-    </>
+      />
+    </div>
   );
 }
 
-export default App
+export default App;
