@@ -8,22 +8,30 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  
 }
 
-.TodoApp {
-  background-color: #fff;
+.App {
+  background-image: url('./assets/bg.png'); 
+  background-size: cover;   
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
+  height: 300px;         
 }
 
-.TodoApp h1 {
+.title {
+  font-size: 2rem; /* Adjust the font size as needed */
+  font-weight: bold;
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  color: #f3eeee; /* Optional: Set the text color */
 }
+
 
 .TdInput {
   display: flex;
@@ -40,7 +48,7 @@ body {
 
 .TdInput button {
   padding: 10px 20px;
-  background-color: #d731dc;
+  background-color: #ffcff5;
   color: white;
   border: none;
   border-radius: 4px;
@@ -49,7 +57,7 @@ body {
 }
 
 .TdInput button:hover {
-  background-color: #218838;
+  background-color: #ea8cea;
 }
 
 .TdList {
@@ -83,7 +91,7 @@ body {
 }
 
 .TdItem button {
-  background-color: #dc3545;
+  background-color: #eabbc0;
   color: white;
   border: none;
   border-radius: 4px;
@@ -93,10 +101,39 @@ body {
 }
 
 .TdItem button:hover {
-  background-color: #c82333;
+  background-color: #f6b3ba;
 }
 
 .TdItem.completed input[type="text"] {
   text-decoration: line-through;
   color: #888;
+}
+
+
+
+
+
+.TdList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-image: url('./assets/bg.png'); /* Background image specific to the list area */
+  background-size: cover;    /* Ensures the image covers the list area */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.TdItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+  background-color: rgba(255, 255, 255, 0.8); /* Slight background for better readability */
+}
+
+.TdItem:last-child {
+  border-bottom: none;
 }
