@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <p class="title"><b>Todo List</b></p>
+      <p class="title"><b>Todo </b></p>
 
       <TdInput addTask={addTask} />
       <TdList
